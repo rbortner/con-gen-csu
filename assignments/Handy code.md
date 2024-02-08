@@ -38,3 +38,48 @@ conda deactivate
 #### exit node
 
 exit
+
+
+####Shell Self Study
+
+The value of PHONE is: 974-222-4444
+(base) [rbortner@colostate.edu@login11 shell]$ $PHONE
+-bash: 974-222-4444: command not found
+(base) [rbortner@colostate.edu@login11 shell]$ Good=i2
+(base) [rbortner@colostate.edu@login11 shell]$ $Good
+-bash: i2: command not found
+(base) [rbortner@colostate.edu@login11 shell]$ cat $Good
+cat: i2: No such file or directory
+(base) [rbortner@colostate.edu@login11 shell]$ Bad=4this
+(base) [rbortner@colostate.edu@login11 shell]$ $Bad
+-bash: 4this: command not found
+(base) [rbortner@colostate.edu@login11 shell]$ Bad=4THIS
+(base) [rbortner@colostate.edu@login11 shell]$ $Bad
+-bash: 4THIS: command not found
+(base) [rbortner@colostate.edu@login11 shell]$ echo $Bad
+4THIS
+(base) [rbortner@colostate.edu@login11 shell]$ Bad=file-name
+(base) [rbortner@colostate.edu@login11 shell]$ echo $Bad
+file-name
+(base) [rbortner@colostate.edu@login11 shell]$ Mandela_Quote="The greatest glory in living lies not in never falling, but in rising every time we fall."
+(base) [rbortner@colostate.edu@login11 shell]$ echo $Mandela_Quote
+The greatest glory in living lies not in never falling, but in rising every time we fall.
+(base) [rbortner@colostate.edu@login11 shell]$ DESSERT="apple pie"
+(base) [rbortner@colostate.edu@login11 shell]$ echo 'Dessert tonight is $DESSERT'
+Dessert tonight is $DESSERT
+(base) [rbortner@colostate.edu@login11 shell]$ DESSERT="apple pie"
+(base) [rbortner@colostate.edu@login11 shell]$ echo "Dessert tonight is $DESSERT"
+Dessert tonight is apple pie
+(base) [rbortner@colostate.edu@login11 shell]$ NAME=Robyn
+(base) [rbortner@colostate.edu@login11 shell]$ FOOD=spaghetti
+(base) [rbortner@colostate.edu@login11 shell]$ ACTIVITY="horse-back riding"
+(base) [rbortner@colostate.edu@login11 shell]$ echo "My name is $NAME. I like to eat $FOOD, and I enjoy $ACTIVITY."
+My name is Robyn. I like to eat spaghetti, and I enjoy horse-back riding.
+(base) [rbortner@colostate.edu@login11 shell]$
+
+##add command to variable
+MyComm="gzip -cd data/samtools_stats/s001_stats.tsv.gz"
+
+
+## run pipes, etc. 
+eval $MyComm 
